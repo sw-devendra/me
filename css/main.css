@@ -7,42 +7,42 @@
 
 .cube {
 	position: relative;
-	width: 200px;
+	width: 600px;
 	transform-style: preserve-3d;
 }
 
 .cube div {
 	position: absolute;
-	width: 200px;
-	height: 200px;
+	width: 600px;
+	height: 600px;
 }
 
 .back {
-	transform: translateZ(-100px) rotateY(180deg);
+	transform: translateZ(-300px) rotateY(180deg);
 	background-color:red;
 }
 .right {
-	transform: rotateY(-270deg) translateX(100px);
+	transform: rotateY(-270deg) translateX(300px);
 	transform-origin: top right;
 	background-color:green;
 }
 .left {
-	transform: rotateY(270deg) translateX(-100px);
+	transform: rotateY(270deg) translateX(-300px);
 	transform-origin: center left;
 	background-color:blue;
 }
 .top {
-	transform: rotateX(-90deg) translateY(-100px);
+	transform: rotateX(-90deg) translateY(-300px);
 	transform-origin: top center;
 	background-color:gray;
 }
 .bottom {
-	transform: rotateX(90deg) translateY(100px);
+	transform: rotateX(90deg) translateY(300px);
 	transform-origin: bottom center;
 	background-color:yellow;
 }
 .front {
-	transform: translateZ(100px);
+	transform: translateZ(300px);
 	background-color:orange;
 }
 @-webkit-keyframes spin {
