@@ -55,3 +55,7 @@
 .cube {
 	animation: spin 5s infinite linear;
 }
+
+.body {
+	background-color:black;
+}
