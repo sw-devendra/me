@@ -45,6 +45,7 @@
 	transform: translateZ(200px);
 	background-color:orange;
 	background-image: url('/images/dev_aryav.jpg');
+	background-size: 400px 400px;
 }
 @-webkit-keyframes spin {
 	from { transform: rotateY(0); }
