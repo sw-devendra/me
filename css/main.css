@@ -44,6 +44,7 @@
 .front {
 	transform: translateZ(200px);
 	background-color:orange;
+	background-image: url('images/dev_aryav.jpg');
 }
 @-webkit-keyframes spin {
 	from { transform: rotateY(0); }
