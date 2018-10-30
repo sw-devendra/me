@@ -17,25 +17,31 @@
 
 .back {
 	transform: translateZ(-100px) rotateY(180deg);
+	background-color:red;
 }
 .right {
 	transform: rotateY(-270deg) translateX(100px);
 	transform-origin: top right;
+	background-color:green;
 }
 .left {
 	transform: rotateY(270deg) translateX(-100px);
 	transform-origin: center left;
+	background-color:blue;
 }
 .top {
 	transform: rotateX(-90deg) translateY(-100px);
 	transform-origin: top center;
+	background-color:gray;
 }
 .bottom {
 	transform: rotateX(90deg) translateY(100px);
 	transform-origin: bottom center;
+	background-color:yellow;
 }
 .front {
 	transform: translateZ(100px);
+	background-color:orange;
 }
 @-webkit-keyframes spin {
 	from { transform: rotateY(0); }
