@@ -30,6 +30,8 @@
 	transform: rotateY(270deg) translateX(-200px);
 	transform-origin: center left;
 	background-color:blue;
+	background-image: url('/images/navya-aryav.png');
+	background-size: 400px 400px;	
 }
 .top {
 	transform: rotateX(-90deg) translateY(-200px);
