@@ -27,6 +27,8 @@
 	transform: rotateY(-270deg) translateX(200px);
 	transform-origin: top right;
 	background-color:green;
+	background-image: url('/images/india.png');
+	background-size: 400px 400px;	
 }
 .left {
 	transform: rotateY(270deg) translateX(-200px);
