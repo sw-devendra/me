@@ -20,6 +20,8 @@
 .back {
 	transform: translateZ(-200px) rotateY(180deg);
 	background-color:red;
+	background-image: url('/images/dev-megha.png');
+	background-size: 400px 400px;		
 }
 .right {
 	transform: rotateY(-270deg) translateX(200px);
