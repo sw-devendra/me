@@ -1,48 +1,48 @@
 .scene {
 	perspective: 800px;
-	perspective-origin: 50% 300px;
-	margin-top:300px;
-	margin-left:300px;
+	perspective-origin: 50% 200px;
+	margin-top:200px;
+	margin-left:200px;
 }
 
 .cube {
 	position: relative;
-	width: 600px;
+	width: 400px;
 	transform-style: preserve-3d;
 }
 
 .cube div {
 	position: absolute;
-	width: 600px;
-	height: 600px;
+	width: 400px;
+	height: 400px;
 }
 
 .back {
-	transform: translateZ(-300px) rotateY(180deg);
+	transform: translateZ(-200px) rotateY(180deg);
 	background-color:red;
 }
 .right {
-	transform: rotateY(-270deg) translateX(300px);
+	transform: rotateY(-270deg) translateX(200px);
 	transform-origin: top right;
 	background-color:green;
 }
 .left {
-	transform: rotateY(270deg) translateX(-300px);
+	transform: rotateY(270deg) translateX(-200px);
 	transform-origin: center left;
 	background-color:blue;
 }
 .top {
-	transform: rotateX(-90deg) translateY(-300px);
+	transform: rotateX(-90deg) translateY(-200px);
 	transform-origin: top center;
 	background-color:gray;
 }
 .bottom {
-	transform: rotateX(90deg) translateY(300px);
+	transform: rotateX(90deg) translateY(200px);
 	transform-origin: bottom center;
 	background-color:yellow;
 }
 .front {
-	transform: translateZ(300px);
+	transform: translateZ(200px);
 	background-color:orange;
 }
 @-webkit-keyframes spin {
