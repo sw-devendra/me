@@ -21,7 +21,7 @@ function init() {
   rotate();
   
   $( ".cube" ).keypress(function( event ) {
-    if ( event.which == 'l' ) {
+    if ( event.key == 'l' ) {
        event.preventDefault();
        direction = 'Y'
        stopDegree = 90
