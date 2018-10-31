@@ -53,6 +53,7 @@
 	background-image: url('/images/companies.png');
 	background-size: 400px 400px;
 }
+/*
 @-webkit-keyframes spin {
 	from { transform: rotateY(0); }
 	to { transform: rotateY(360deg); }
@@ -60,7 +61,7 @@
 
 .cube {
 	animation: spin 5s infinite linear;
-}
+}*/
 
 body {
 	background-color:black;
