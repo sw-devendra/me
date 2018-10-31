@@ -1,6 +1,6 @@
 var $elie = $(".cube"), degree = 0, timer;
-var stopDegree;
-var direction
+var stopDegree = 0;
+var direction = ''
 
 function rotate() {
         if (stopDegree == degree) {
@@ -15,11 +15,7 @@ function rotate() {
         },5);
     }
 
-function init() {
-  
-
-  rotate();
-  
+function init() {  
   $( ".cube" ).keypress(function( event ) {
     if ( event.key == 'l' ) {
        event.preventDefault();
