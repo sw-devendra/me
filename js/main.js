@@ -16,7 +16,8 @@ function rotate() {
     }
 
 function init() {  
-  $( ".cube" ).keypress(function( event ) {
+  $elie = $(".cube")
+  $elie.keypress(function( event ) {
     if ( event.key == 'l' ) {
        event.preventDefault();
        direction = 'Y'
