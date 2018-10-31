@@ -48,7 +48,7 @@ function init() {
         stopDegree = 90
         rotate()
     }            
-    if ( event.key == 'b' ) {
+    if ( event.key == 'd' ) {
         event.preventDefault();
         direction = 'X'
         stopDegree = 270
