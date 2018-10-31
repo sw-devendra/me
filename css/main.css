@@ -65,3 +65,27 @@
 body {
 	background-color:black;
 }
+
+.frontview {
+	transform: rotateY(0);
+}
+
+.leftview {
+	transform: rotateY(-90deg);
+}
+
+.backview {
+	transform: rotateY(-180deg);
+}
+
+.rightview {
+	transform: rotateY(90deg);
+}
+
+.topview {
+	transform: rotateX(90deg);
+}
+
+.botomview {
+	transform: rotateX(-90deg);
+}
