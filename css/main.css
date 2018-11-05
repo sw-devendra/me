@@ -1,6 +1,6 @@
 .scene {
 	perspective: 800px;
-	perspective-origin: 50% 200px;
+	perspective-origin: 300px 300px;
 	margin-top:200px;
 	margin-left:200px;
 }
