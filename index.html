@@ -10,17 +10,43 @@
 		
 		<!-- local -->
 		<script src="js/main.js"></script>
+		<script src="js/jquery.montage.min.js"></script>
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body onload="init()">
 				<div class="scene">
 					<div class="cube" tabindex='0'>
-						<div class="front">front</div>
-						<div class="back">back</div>
-						<div class="top">top</div>
-						<div class="bottom">bottom</div>
-						<div class="left">left</div>
-						<div class="right">right</div>
+						<div class="front">
+							<img class="faceContent" id="frontContent" src='images/india.png'> 
+							</img>
+							<!--div class="faceContent" id="frontContent"> 
+								<div class="am-container" id="am-container">
+									<a href="#"><img src="images/family.png"></img></a>
+									<a href="#"><img src="images/dev-megha.png"></img></a>
+									<a href="#"><img src="images/companies.png"></img></a>
+								</div>							
+							</div-->
+						</div>
+						<div class="back">
+							<img class="faceContent" id="backContent" src='images/companies.png'> 
+							</img>
+						</div>
+						<div class="top">
+							<img class="faceContent" id="topContent" src='images/toastmaster.png'> 
+							</img>
+						</div>
+						<div class="bottom">
+							<img class="faceContent" id="bottomContent" src='images/singing.png'> 
+							</img>
+						</div>
+						<div class="left">
+							<img class="faceContent" id="leftContent" src='images/learning.png'> 
+							</img>
+						</div>
+						<div class="right">
+							<img class="faceContent" id="rightContent" src='images/family.png'> 
+							</img>
+						</div>
 					</div>
 				</div>
 	</body>

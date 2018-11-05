@@ -1,59 +1,57 @@
 .scene {
 	perspective: 800px;
-	perspective-origin: 400px 400px;
-	margin-top:200px;
-	margin-left:200px;
+	perspective-origin: 410px 410px;
+	margin-top:205px;
+	margin-left:205px;
 }
 
 .cube {
 	position: relative;
-	width: 400px;
+	width: 410px;
+	height: 410px;
 	transform-style: preserve-3d;
-	transform-origin: center center;
+	transform-origin: center center center;
 }
 
 .cube div {
 	position: absolute;
-	width: 400px;
-	height: 400px;
+	width: 410px;
+	height: 410px;
 }
 
 .back {
-	transform: translateZ(-200px) rotateY(180deg);
-	background-color:red;
-	background-image: url('/images/dev-megha.png');
-	background-size: 400px 400px;		
+	transform: translateZ(-205px) rotateY(180deg);
+	background-size: 410px 410px;
+	opacity: 1;		
 }
 .right {
-	transform: rotateY(-270deg) translateX(200px);
+	transform: rotateY(-270deg) translateX(205px);
 	transform-origin: top right;
-	background-color:green;
-	background-image: url('/images/india.png');
-	background-size: 400px 400px;	
+	background-size: 410px 410px;
+	opacity: 1;	
 }
 .left {
-	transform: rotateY(270deg) translateX(-200px);
+	transform: rotateY(270deg) translateX(-205px);
 	transform-origin: center left;
-	background-color:blue;
-	background-image: url('/images/navya-aryav.png');
-	background-size: 400px 400px;	
+	background-size: 410px 410px;
+	opacity: 1;	
 }
 .top {
-	transform: rotateX(-90deg) translateY(-200px);
+	transform: rotateX(90deg) translateY(-205px);
 	transform-origin: top center;
-	background-color:gray;
+	opacity: 1;
 }
 .bottom {
-	transform: rotateX(90deg) translateY(200px);
+	transform: rotateX(-90deg) translateY(205px);
 	transform-origin: bottom center;
-	background-color:yellow;
+	opacity: 1;
 }
 .front {
-	transform: translateZ(200px);
-	background-color:orange;
-	background-image: url('/images/companies.png');
-	background-size: 400px 400px;
+	transform: translateZ(205px);
+	background-size: 410px 410px;
+	opacity: 1;
 }
+
 /*
 @-webkit-keyframes spin {
 	from { transform: rotateY(0); }
@@ -62,8 +60,8 @@
 
 .cube {
 	animation: spin 5s infinite linear;
-}*/
-
+}
+*/
 body {
 	background-color:black;
 }
@@ -91,3 +89,15 @@ body {
 .botomview {
 	transform: rotateX(-90deg);
 }
+
+.faceContent {
+	margin: 5px 5px 5px 5px;
+	width: 400px;
+	height: 400px;
+}
+/*
+#frontContent {
+	width:400px;height:400px;
+	overflow-y:scroll; 
+	margin:40px auto;
+} */

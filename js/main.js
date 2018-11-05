@@ -1,58 +1,116 @@
 var $elie = $(".cube"), degree = 0, timer;
 var stopDegree = 0;
 var direction = ''
+var forever
+var degreeY = 0
+var degreeX = 0
+var delay = 10
+
+function switchDirection() {
+        direction = (direction == 'X')? 'Y' : 'X'
+}
 
 function rotate() {
-        if (stopDegree == degree) {
-          degree = 0
-          return;
+        if (direction == 'X') {
+            $elie.css({ WebkitTransform: 'rotate' + direction + '(' + degreeX + 'deg)', 
+                        'transform-origin': 'center center center', 
+                        });  
+            $elie.css({ '-moz-transform': 'rotate' + direction + '(' + degreeX + 'deg)',
+                        });
+            if (forever || degreeX< stopDegree)   {                
+                timer = setTimeout(function() {
+                    ++degreeX; rotate();
+                },delay);
+            }
+            else {
+                if (degreeX >= 360) {
+                    degreeX = degreeX%360;
+                }
+            }
         }
-  
-        $elie.css({ transform-origin: center center; WebkitTransform: 'rotate' + direction + '(' + degree + 'deg)';});  
-        $elie.css({ transform-origin: center center; '-moz-transform': 'rotate' + direction + '(' + degree + 'deg)'});                      
-        timer = setTimeout(function() {
-            ++degree; rotate();
-        },5);
+        else {
+            $elie.css({ WebkitTransform: 'rotate' + direction + '(' + degreeY + 'deg)', 
+                        'transform-origin': 'center center center'});  
+            $elie.css({ '-moz-transform': 'rotate' + direction + '(' + degreeY + 'deg)'});                      
+            if (forever || degreeY< stopDegree)   {                
+                timer = setTimeout(function() {
+                    ++degreeY; rotate();
+                },delay);
+            }
+            else {
+                if (degreeY >= 360) {
+                    degreeY = degreeY%360;
+                }
+            }           
+        }
     }
 
 function init() {  
   $elie = $(".cube")
   $elie.keypress(function( event ) {
-    if ( event.key == 'l' ) {
+    forever = false;
+    degreeX = 0;
+    degreeY = 0;
+    if ( event.key == '4' ) {
        event.preventDefault();
        direction = 'Y'
        stopDegree = 90
        rotate()
     }
-    if ( event.key == 'r' ) {
+    if ( event.key == '2' ) {
         event.preventDefault();
         direction = 'Y'
         stopDegree = 270
         rotate()
     }  
-    if ( event.key == 'b' ) {
+    if ( event.key == '3' ) {
         event.preventDefault();
         direction = 'Y'
         stopDegree = 180
         rotate()
     }  
-    if ( event.key == 'f' ) {
+    if ( event.key == '1' ) {
         event.preventDefault();
         direction = 'Y'
         stopDegree = 360
         rotate()
     }  
-    if ( event.key == 't' ) {
+    if ( event.key == '6' ) {
         event.preventDefault();
         direction = 'X'
         stopDegree = 90
         rotate()
     }            
-    if ( event.key == 'd' ) {
+    if ( event.key == '5' ) {
         event.preventDefault();
         direction = 'X'
         stopDegree = 270
         rotate()
     }                 
   });
+/*
+  var $container 	= $('#am-container'),
+					$imgs		= $container.find('img').hide()
+					totalImgs	= $imgs.length,
+					cnt			= 0;
+				
+				$imgs.each(function(i) {
+					var $img	= $(this);
+					$('<img/>').on('load',function() {
+						++cnt;
+						if( cnt === totalImgs ) {
+							$imgs.show();
+							$container.montage({
+                                liquid 	: false,
+                                fixedHeight : 200
+							});
+							
+						}
+					}).attr('src',$img.attr('src'));
+				});	
+*/
+  forever = true;
+  stopDegree = 360;
+  direction = 'Y'
+  rotate();
 }
