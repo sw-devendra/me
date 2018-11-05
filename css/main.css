@@ -9,6 +9,7 @@
 	position: relative;
 	width: 400px;
 	transform-style: preserve-3d;
+	transform-origin: center center;
 }
 
 .cube div {
