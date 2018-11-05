@@ -8,8 +8,8 @@ function rotate() {
           return;
         }
   
-        $elie.css({ WebkitTransform: {'rotate' + direction + '(' + degree + 'deg)'}});  
-        $elie.css({ '-moz-transform': {'rotate' + direction + '(' + degree + 'deg)'}});                      
+        $elie.css({ transform-origin: center center; WebkitTransform: 'rotate' + direction + '(' + degree + 'deg)';});  
+        $elie.css({ transform-origin: center center; '-moz-transform': 'rotate' + direction + '(' + degree + 'deg)'});                      
         timer = setTimeout(function() {
             ++degree; rotate();
         },5);
