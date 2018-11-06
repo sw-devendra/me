@@ -17,6 +17,9 @@ function rotate() {
                         });  
             $elie.css({ '-moz-transform': 'rotate' + direction + '(' + degreeX + 'deg)',
                         });
+            $elie.css({ '-ms-transform': 'rotate' + direction + '(' + degreeX + 'deg)', 
+                        'transform-origin': 'center center center', 
+                        });  		
             if (forever || degreeX< stopDegree)   {                
                 timer = setTimeout(function() {
                     ++degreeX; rotate();
@@ -31,7 +34,9 @@ function rotate() {
         else {
             $elie.css({ WebkitTransform: 'rotate' + direction + '(' + degreeY + 'deg)', 
                         'transform-origin': 'center center center'});  
-            $elie.css({ '-moz-transform': 'rotate' + direction + '(' + degreeY + 'deg)'});                      
+            $elie.css({ '-moz-transform': 'rotate' + direction + '(' + degreeY + 'deg)'}); 
+            $elie.css({ '-ms-transform': 'rotate' + direction + '(' + degreeY + 'deg)', 
+                        'transform-origin': 'center center center'});  		
             if (forever || degreeY< stopDegree)   {                
                 timer = setTimeout(function() {
                     ++degreeY; rotate();
