@@ -78,7 +78,7 @@ function init() {
         stopDegree = 360
         rotate()
     }  
-    if ( event.key == '6' ) {
+    else if ( event.key == '6' ) {
         event.preventDefault();
         direction = 'X'
         stopDegree = 90
@@ -90,7 +90,7 @@ function init() {
         stopDegree = 270
         rotate()
     }
-    if (event.key == '39') { // Right
+    else if (event.keyCode == 39) { // Right
 	stopDegree = degreeY + 90
 	direction = 'Y'
 	rotate()
