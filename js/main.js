@@ -52,7 +52,7 @@ function rotate() {
 
 function init() {  
   $elie = $(".cube")
-  $(document).keypress(function( event ) {
+  $(document).keydown(function( event ) {
     forever = false;
     if ( event.key == '4' ) {
        event.preventDefault();
