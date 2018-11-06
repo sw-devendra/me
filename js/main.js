@@ -91,10 +91,15 @@ function init() {
         rotate()
     }
     else if (event.keyCode == 39) { // Right
-	stopDegree = degreeY + 90
+	stopDegree = degreeY + 90 - (degreeY%90)
 	direction = 'Y'
 	rotate()
     }
+    else if (event.keyCode == 40) { // Right
+	stopDegree = degreeX + 90 - (degreeX%90)
+	direction = 'X'
+	rotate()
+    }	  
   });
 /*
   var $container 	= $('#am-container'),
