@@ -17,7 +17,7 @@ function rotate() {
                         });  
             $elie.css({ '-moz-transform': 'rotate' + direction + '(' + degreeX + 'deg)',
                         });
-            $elie.css({ '-ms-transform': 'rotate' + direction + '(' + degreeX + 'deg)', 
+            $elie.css({ 'transform': 'rotate' + direction + '(' + degreeX + 'deg)', 
                         'transform-origin': 'center center center', 
                         });  		
             if (forever || degreeX< stopDegree)   {                
@@ -35,7 +35,7 @@ function rotate() {
             $elie.css({ WebkitTransform: 'rotate' + direction + '(' + degreeY + 'deg)', 
                         'transform-origin': 'center center center'});  
             $elie.css({ '-moz-transform': 'rotate' + direction + '(' + degreeY + 'deg)'}); 
-            $elie.css({ '-ms-transform': 'rotate' + direction + '(' + degreeY + 'deg)', 
+            $elie.css({ 'transform': 'rotate' + direction + '(' + degreeY + 'deg)', 
                         'transform-origin': 'center center center'});  		
             if (forever || degreeY< stopDegree)   {                
                 timer = setTimeout(function() {
@@ -50,8 +50,18 @@ function rotate() {
         }
     }
 
+
+function handleSizeChange() {
+    var viewportWidth = window.visualViewport.width
+    var viewportHeight = window.visualViewport.height
+    $('.scene').css({	'perspective-origin': (viewportWidth/2) + 'px ' + (viewportHeight/2) + 'px'}),
+	$elie.css({'top': (viewportHeight/2 - 205) + 'px', 'left': (viewportWidth/2 - 205) + 'px'})
+}
+
 function init() {  
   $elie = $(".cube")
+  handleSizeChange();
+  $(window).resize(handleSizeChange);
   $(document).keydown(function( event ) {
     forever = false;
     if ( event.key == '4' ) {

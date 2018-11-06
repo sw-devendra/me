@@ -1,12 +1,8 @@
 .scene {
 	perspective: 800px;
 	perspective-origin: 410px 410px;
-	
-	-ms-perspective: 800px;
-	-ms-perspective-origin: 410px 410px;
-	
-	margin-top:205px;
-	margin-left:205px;
+	width: 100%;
+	height: 100%;
 }
 
 .cube {
@@ -15,8 +11,6 @@
 	height: 410px;
 	transform-style: preserve-3d;
 	transform-origin: center center center;
-	-ms-transform-style: preserve-3d;
-	-ms-transform-origin: center center center;	
 }
 
 .cube div {
@@ -27,17 +21,13 @@
 
 .back {
 	transform: translateZ(-205px) rotateY(180deg);
-	-ms-transform: translateZ(-205px) rotateY(180deg);
 	background-size: 410px 410px;
 	opacity: 1;		
 }
 .right {
 	transform: rotateY(-270deg) translateX(205px);
 	transform-origin: top right;
-	
-	-ms-transform: rotateY(-270deg) translateX(205px);
-	-ms-transform-origin: top right;
-	
+
 	background-size: 410px 410px;
 	opacity: 1;	
 }
@@ -45,32 +35,22 @@
 	transform: rotateY(270deg) translateX(-205px);
 	transform-origin: center left;
 	
-	-ms-transform: rotateY(270deg) translateX(-205px);
-	-ms-transform-origin: center left;
-	
 	background-size: 410px 410px;
 	opacity: 1;	
 }
 .top {
 	transform: rotateX(90deg) translateY(-205px);
 	transform-origin: top center;
-	
-	-ms-transform: rotateX(90deg) translateY(-205px);
-	-ms-transform-origin: top center;	
 	opacity: 1;
 }
 .bottom {
 	transform: rotateX(-90deg) translateY(205px);
 	transform-origin: bottom center;
-	
-	-ms-transform: rotateX(-90deg) translateY(205px);
-	-ms-transform-origin: bottom center;	
+
 	opacity: 1;
 }
 .front {
 	transform: translateZ(205px);
-	
-	-ms-transform: translateZ(205px);
 	
 	background-size: 410px 410px;
 	opacity: 1;
@@ -92,32 +72,26 @@ body {
 
 .frontview {
 	transform: rotateY(0);
-	-ms-transform: rotateY(0);	
 }
 
 .leftview {
 	transform: rotateY(-90deg);
-	-ms-transform: rotateY(-90deg);	
 }
 
 .backview {
 	transform: rotateY(-180deg);
-        -ms-transform: rotateY(-180deg);	
 }
 
 .rightview {
 	transform: rotateY(90deg);
-	-ms-transform: rotateY(90deg);	
 }
 
 .topview {
 	transform: rotateX(90deg);
-	-ms-transform: rotateX(90deg);
 }
 
 .botomview {
 	transform: rotateX(-90deg);
-	-ms-transform: rotateX(-90deg);
 }
 
 .faceContent {
