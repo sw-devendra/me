@@ -54,27 +54,25 @@ function init() {
   $elie = $(".cube")
   $(document).keypress(function( event ) {
     forever = false;
-    degreeX = 0;
-    degreeY = 0;
     if ( event.key == '4' ) {
        event.preventDefault();
        direction = 'Y'
        stopDegree = 90
        rotate()
     }
-    if ( event.key == '2' ) {
+    else if ( event.key == '2' ) {
         event.preventDefault();
         direction = 'Y'
         stopDegree = 270
         rotate()
     }  
-    if ( event.key == '3' ) {
+    else if ( event.key == '3' ) {
         event.preventDefault();
         direction = 'Y'
         stopDegree = 180
         rotate()
     }  
-    if ( event.key == '1' ) {
+    else if ( event.key == '1' ) {
         event.preventDefault();
         direction = 'Y'
         stopDegree = 360
@@ -86,12 +84,17 @@ function init() {
         stopDegree = 90
         rotate()
     }            
-    if ( event.key == '5' ) {
+    else if ( event.key == '5' ) {
         event.preventDefault();
         direction = 'X'
         stopDegree = 270
         rotate()
-    }                 
+    }
+    if (event.key == '39') { // Right
+	stopDegree = degreeY + 90
+	direction = 'Y'
+	rotate()
+    }
   });
 /*
   var $container 	= $('#am-container'),
