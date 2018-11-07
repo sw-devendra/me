@@ -5,6 +5,7 @@ var forever
 var degreeY = 0
 var degreeX = 0
 var delay = 10
+var currentPerspective = 800
 
 function isFirefox() {
     return navigator.userAgent.toLowerCase().indexOf('firefox') > -1
@@ -92,8 +93,12 @@ function handleSizeChange() {
         viewportWidth = window.visualViewport.width
         viewportHeight = window.visualViewport.height
     }
+
+    //var cubeSize = viewportHeight*0.8;
+    //var margine = 10;
+
     $('.scene').css({	'perspective-origin': (viewportWidth/2) + 'px ' + (viewportHeight/2) + 'px'}),
-	$elie.css({'top': (viewportHeight/2 - 205) + 'px', 'left': (viewportWidth/2 - 205) + 'px'})
+	$elie.css({'top': (viewportHeight/2 - 210) + 'px', 'left': (viewportWidth/2 - 210) + 'px'})
 }
 
 function init() {  
@@ -101,53 +106,63 @@ function init() {
   handleSizeChange();
   $(window).resize(handleSizeChange);
   $(document).keydown(function( event ) {
-    forever = false;
-    if ( event.key == '4' ) {
-       event.preventDefault();
-       direction = 'Y'
-       stopDegree = 90
-       rotate()
+    if (event.key == '-') {
+        currentPerspective = currentPerspective + 100
+        $('.scene').css({'perspective': currentPerspective + 'px'})
+    } 
+    else if (event.key == '+') {
+        currentPerspective = currentPerspective - 100
+        $('.scene').css({'perspective': currentPerspective + 'px'})
     }
-    else if ( event.key == '2' ) {
-        event.preventDefault();
-        direction = 'Y'
-        stopDegree = 270
-        rotate()
-    }  
-    else if ( event.key == '3' ) {
-        event.preventDefault();
-        direction = 'Y'
-        stopDegree = 180
-        rotate()
-    }  
-    else if ( event.key == '1' ) {
-        event.preventDefault();
-        direction = 'Y'
-        stopDegree = 360
-        rotate()
-    }  
-    else if ( event.key == '6' ) {
-        event.preventDefault();
-        direction = 'X'
-        stopDegree = 90
-        rotate()
-    }            
-    else if ( event.key == '5' ) {
-        event.preventDefault();
-        direction = 'X'
-        stopDegree = 270
-        rotate()
+    else {
+        forever = false;
+        if ( event.key == '4' ) {
+           event.preventDefault();
+           direction = 'Y'
+           stopDegree = 90
+           rotate()
+        }
+        else if ( event.key == '2' ) {
+            event.preventDefault();
+            direction = 'Y'
+            stopDegree = 270
+            rotate()
+        }  
+        else if ( event.key == '3' ) {
+            event.preventDefault();
+            direction = 'Y'
+            stopDegree = 180
+            rotate()
+        }  
+        else if ( event.key == '1' ) {
+            event.preventDefault();
+            direction = 'Y'
+            stopDegree = 360
+            rotate()
+        }  
+        else if ( event.key == '6' ) {
+            event.preventDefault();
+            direction = 'X'
+            stopDegree = 90
+            rotate()
+        }            
+        else if ( event.key == '5' ) {
+            event.preventDefault();
+            direction = 'X'
+            stopDegree = 270
+            rotate()
+        }
+        else if (event.keyCode == 39) { // Right
+            stopDegree = degreeY + 90 - (degreeY%90)
+            direction = 'Y'
+            rotate()
+        }
+        else if (event.keyCode == 40) { // Right
+            stopDegree = degreeX + 90 - (degreeX%90)
+            direction = 'X'
+            rotate()
+        }
     }
-    else if (event.keyCode == 39) { // Right
-	stopDegree = degreeY + 90 - (degreeY%90)
-	direction = 'Y'
-	rotate()
-    }
-    else if (event.keyCode == 40) { // Right
-	stopDegree = degreeX + 90 - (degreeX%90)
-	direction = 'X'
-	rotate()
-    }	  
   });
 /*
   var $container 	= $('#am-container'),
